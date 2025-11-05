@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian IT Hub - Premium IT Companies Directory</title>
+    <link rel="stylesheet" href="newstyle.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="showPage('landing')">
+                <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="12" width="32" height="32" stroke="#C1121F" stroke-width="2" fill="none"/>
+                    <rect x="12" y="18" width="6" height="6" fill="#003049"/>
+                    <rect x="21" y="18" width="6" height="6" fill="#003049"/>
+                    <rect x="30" y="18" width="6" height="6" fill="#003049"/>
+                    <rect x="12" y="27" width="6" height="6" fill="#003049"/>
+                    <rect x="21" y="27" width="6" height="6" fill="#003049"/>
+                    <rect x="30" y="27" width="6" height="6" fill="#003049"/>
+                    <rect x="12" y="36" width="24" height="6" fill="#780000" opacity="0.3"/>
+                </svg>
+                <div class="logo-text">
+                    <h1>Indian IT Hub</h1>
+                    <p>Premium IT Partner Directory</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a onclick="showPage('landing')">Home</a></li>
+                <li><a onclick="showPage('cities')">Browse Companies</a></li>
+                <li><a onclick="showPage('templates')">Templates</a></li>
+                <li><a onclick="showPage('resources')">Resources</a></li>
+                <li><button class="nav-btn" onclick="showPage('cities')">Explore Now</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <div id="landingPage">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1><span class="emoji">🚀</span> Discover India's Premium IT Companies</h1>
+                <p>Your comprehensive directory of 150+ verified IT companies across Indore & Vadodara</p>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat-card">
+                        <div class="hero-stat-number">150+</div>
+                        <div class="hero-stat-label">IT Companies</div>
+                    </div>
+                    <div class="hero-stat-card">
+                        <div class="hero-stat-number">2</div>
+                        <div class="hero-stat-label">Major Cities</div>
+                    </div>
+                    <div class="hero-stat-card">
+                        <div class="hero-stat-number">4.6</div>
+                        <div class="hero-stat-label">Avg Rating</div>
+                    </div>
+                    <div class="hero-stat-card">
+                        <div class="hero-stat-number">100%</div>
+                        <div class="hero-stat-label">Verified</div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <button class="cta-btn cta-primary" onclick="showPage('cities')">
+                        <span class="emoji">🔍</span> Explore Companies
+                    </button>
+                    <button class="cta-btn cta-secondary" onclick="showPage('resources')">
+                        <span class="emoji">📚</span> Resources
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">Why Choose Our Platform?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon emoji">✅</div>
+                    <h3>Verified Companies</h3>
+                    <p>All companies verified with real addresses and genuine reviews</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon emoji">🎯</div>
+                    <h3>Smart Filtering</h3>
+                    <p>Filter by rating, location, and services instantly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon emoji">💾</div>
+                    <h3>Track Progress</h3>
+                    <p>Mark companies as visited and track your research</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon emoji">📚</div>
+                    <h3>Learning Resources</h3>
+                    <p>Complete roadmaps for tech careers</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon emoji">🌐</div>
+                    <h3>Direct Access</h3>
+                    <p>Get contact info instantly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon emoji">📧</div>
+                    <h3>Email Templates</h3>
+                    <p>Professional HR outreach templates</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- City Selection -->
+    <div id="citiesPage" style="display:none;">
+        <div class="city-selection">
+            <button class="back-btn" onclick="showPage('landing')" style="margin-bottom: 30px;">
+                <span class="emoji">←</span> Back to Home
+            </button>
+            <h1 class="section-title" style="color:#003049;">Choose Your City</h1>
+            <div class="city-cards">
+                <div class="city-card" onclick="showCityLocations('indore')">
+                    <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80');"></div>
+                    <div class="city-content">
+                        <h2 class="city-title"><span class="emoji" >🏙️</span> Indore</h2>
+                        <p class="city-subtitle">Commercial capital of Madhya Pradesh</p>
+                        <div class="city-stats">
+                            <div class="city-stat"><span class="emoji">🏢</span><span>83+ Companies</span></div>
+                            <div class="city-stat"><span class="emoji">⭐</span><span>4.5 Rating</span></div>
+                        </div>
+                        <button class="city-btn">Explore Indore →</button>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="showCityLocations('vadodara')">
+                    <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&q=80');"></div>
+                    <div class="city-content">
+                        <h2 class="city-title"><span class="emoji">🏛️</span> Vadodara</h2>
+                        <p class="city-subtitle">Cultural capital of Gujarat</p>
+                        <div class="city-stats">
+                            <div class="city-stat"><span class="emoji">🏢</span><span>35+ Companies</span></div>
+                            <div class="city-stat"><span class="emoji">⭐</span><span>4.7 Rating</span></div>
+                        </div>
+                        <button class="city-btn">Explore Vadodara →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Selection -->
+    <div id="locationPage" style="display:none;">
+        <div style="padding: 50px 30px; max-width: 1200px; margin: 0 auto;">
+            <button class="back-btn" onclick="showPage('cities')"><span class="emoji">←</span> Back to Cities</button>
+            <h1 class="section-title" style="color:#003049; margin-bottom:50px;">Select Location in <span id="currentCityName">Indore</span></h1>
+            <div class="location-cards" id="locationCards"></div>
+        </div>
+    </div>
+
+    <!-- Listings Page -->
+    <div id="listingsPage" style="display:none;">
+        <div style="padding: 50px 30px;">
+            <div class="listings-container">
+                <button class="back-btn" onclick="goBackToLocations()"><span class="emoji">←</span> Back to Locations</button>
+                <div class="listings-header">
+                    <h1 id="listingsTitle"><span class="emoji">🏢</span> IT Companies</h1>
+                    <p id="listingsSubtitle" style="color:#003049; font-size:1em;"></p>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalCompanies">0</div>
+                        <div class="stat-label">Total Companies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="visitedCount">0</div>
+                        <div class="stat-label">Visited</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="avgRating">0</div>
+                        <div class="stat-label">Avg Rating</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="filteredCount">0</div>
+                        <div class="stat-label">Showing</div>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label><span class="emoji">🔍</span> Search</label>
+                        <input type="text" id="searchInput" placeholder="Search by name, address, services...">
+                    </div>
+                    <div class="filter-group">
+                        <label><span class="emoji">⭐</span> Rating</label>
+                        <select id="ratingFilter">
+                            <option value="all">All Ratings</option>
+                            <option value="5">5.0 Stars</option>
+                            <option value="4.8">4.8+ Stars</option>
+                            <option value="4.5">4.5+ Stars</option>
+                            <option value="4">4.0+ Stars</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label><span class="emoji">✅</span> Status</label>
+                        <select id="visitedFilter">
+                            <option value="all">All Companies</option>
+                            <option value="visited">Visited Only</option>
+                            <option value="notVisited">Not Visited</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>&nbsp;</label>
+                        <button class="btn btn-secondary" onclick="clearAllVisited()">Clear All</button>
+                    </div>
+                </div>
+
+                <div class="companies-grid" id="companiesGrid"></div>
+
+                <!-- Export Section -->
+                <div class="export-section">
+                    <h3><span class="emoji">📥</span> Export Your Data</h3>
+                    <p>Your visited companies are saved in your browser. Export for backup!</p>
+                    <button class="btn" onclick="exportVisited()">Export Visited Companies</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates Page -->
+    <div id="templatesPage" style="display:none;">
+        <div class="templates-page">
+            <button class="back-btn" onclick="showPage('landing')" style="margin-bottom: 30px;">
+                <span class="emoji">←</span> Back to Home
+            </button>
+            
+            <div class="templates-header">
+                <h1><span class="emoji">📧</span> Email Templates for HR Outreach</h1>
+                <p>Professional templates to reach out to companies and HR managers</p>
+                <button class="add-template-btn" onclick="openAddTemplateModal()" title="Add New Template">+</button>
+            </div>
+
+            <div class="templates-grid" id="templatesGrid"></div>
+        </div>
+    </div>
+
+    <!-- Add Template Modal -->
+    <div id="addTemplateModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><span class="emoji">➕</span> Add New Template</h2>
+                <button class="close-modal" onclick="closeAddTemplateModal()">&times;</button>
+            </div>
+            <form id="addTemplateForm" onsubmit="addNewTemplate(event)">
+                <div class="form-group">
+                    <label for="templateName">Template Name *</label>
+                    <input type="text" id="templateName" required placeholder="e.g., Follow-up After Interview">
+                </div>
+                <div class="form-group">
+                    <label for="templateContent">Template Content *</label>
+                    <textarea id="templateContent" required placeholder="Enter your email template here..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Add Template</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Resources Page -->
+    <div id="resourcesPage" style="display:none;">
+        <div class="resources-page">
+            <div class="page-header">
+                <h1><span class="emoji">📚</span> Learning Resources</h1>
+                <p>Complete roadmaps, tutorials, and resources for your tech career</p>
+            </div>
+
+           <!-- Profile Cards View -->
+<div id="profilesView">
+    <div class="profiles-grid">
+        <div class="profile-card" onclick="showResourceDetail('devops')">
+            <div class="profile-icon emoji">⚙️</div>
+            <h3>DevOps Engineer</h3>
+            <p>Learn cloud platforms, CI/CD, containerization, and infrastructure automation</p>
+        </div>
+
+        <div class="profile-card" onclick="showResourceDetail('datascience')">
+            <div class="profile-icon emoji">📊</div>
+            <h3>Data Science</h3>
+            <p>Master data analysis, machine learning, and statistical modeling</p>
+            <span class="coming-soon">Roadmap Ready</span>
+        </div>
+
+        <div class="profile-card" onclick="showResourceDetail('businessanalyst')">
+            <div class="profile-icon emoji">💼</div>
+            <h3>Business Analyst</h3>
+            <p>Requirements gathering, process modeling, and stakeholder management</p>
+            <span class="coming-soon">Roadmap Ready</span>
+        </div>
+
+        <div class="profile-card" onclick="showResourceDetail('frontend')">
+            <div class="profile-icon emoji">🎨</div>
+            <h3>Frontend Developer</h3>
+            <p>HTML, CSS, JavaScript, React, and modern UI frameworks</p>
+            <span class="coming-soon">Roadmap Ready</span>
+        </div>
+
+        <div class="profile-card" onclick="showResourceDetail('backend')">
+            <div class="profile-icon emoji">🔧</div>
+            <h3>Backend Developer</h3>
+            <p>Server-side programming, databases, APIs, and system design</p>
+            <span class="coming-soon">Roadmap Ready</span>
+        </div>
+
+        <div class="profile-card" onclick="showResourceDetail('fullstack')">
+            <div class="profile-icon emoji">🚀</div>
+            <h3>Full Stack Developer</h3>
+            <p>Complete web development: frontend, backend, and databases</p>
+            <span class="coming-soon">Roadmap Ready</span>
+        </div>
+
+        <!-- English Communication Card -->
+        <div class="profile-card" onclick="showEnglishResources()">
+            <div class="profile-icon emoji">🗣️</div>
+            <h3>English Communication</h3>
+            <p>Master English speaking with confidence. Perfect for those struggling with communication and looking to improve their fluency and speaking skills.</p>
+        </div>
+
+        <!-- AI & Technology Card -->
+        <div class="profile-card" onclick="showAIResources()">
+            <div class="profile-icon emoji">🤖</div>
+            <h3>AI & Technology</h3>
+            <p>Learn AI essentials for the modern world. From ChatGPT to machine learning, understand AI tools that are transforming every industry.</p>
+        </div>
+
+    </div>
+</div>
+
+            <!-- DevOps Detail View -->
+            <div id="devopsDetailView" style="display:none;">
+                <div class="detail-view">
+                    <button class="back-btn" onclick="backToProfiles()"><span class="emoji">←</span> Back to Resources</button>
+                    
+                    <div class="detail-header">
+                        <h2><span class="emoji">⚙️</span> DevOps Engineer Roadmap</h2>
+                        <p>Complete learning path from beginner to advanced</p>
+                    </div>
+
+                    <!-- Roadmap -->
+                    <div class="roadmap-container">
+                        <h3 class="roadmap-title">DevOps Learning Journey</h3>
+                        <div class="roadmap-path"></div>
+
+                        <!-- Node 1 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-1">
+                                <div class="node-number">01</div>
+                                <div class="node-title"><span>🐧 Linux Fundamentals</span></div>
+                                <ul class="node-items">
+                                    <li>Command Line (Bash)</li>
+                                    <li>File System, Processes, Permissions</li>
+                                    <li>Package managers (apt, yum)</li>
+                                    <li>Editors (vim, nano)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 2 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-2">
+                                <div class="node-number">02</div>
+                                <div class="node-title"><span>🌐 Networking & Security</span></div>
+                                <ul class="node-items">
+                                    <li>OSI & TCP/IP models</li>
+                                    <li>Protocols (HTTP, HTTPS, SSH, DNS)</li>
+                                    <li>IP addressing & subnetting</li>
+                                    <li>Firewalls, proxies, troubleshooting</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 3 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-3">
+                                <div class="node-number">03</div>
+                                <div class="node-title"><span>💻 Programming for DevOps</span></div>
+                                <ul class="node-items">
+                                    <li>Python (most preferred), Go, or Ruby</li>
+                                    <li>File handling, APIs, automation</li>
+                                    <li>Essential libraries & scripting</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 4 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-4">
+                                <div class="node-number">04</div>
+                                <div class="node-title"><span>⚙️ Version Control</span></div>
+                                <ul class="node-items">
+                                    <li>Git basics (init, clone, commit, push, pull)</li>
+                                    <li>Branching & merging</li>
+                                    <li>Conflict resolution</li>
+                                    <li>Remote repositories GitHub/GitLab</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 5 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-5">
+                                <div class="node-number">05</div>
+                                <div class="node-title"><span>☁️ Cloud Platforms</span></div>
+                                <ul class="node-items">
+                                    <li>AWS (most preferred), Azure, or GCP</li>
+                                    <li>Compute & storage EC2, S3, RDS</li>
+                                    <li>IAM (users, roles, policies)</li>
+                                    <li>VPC & networking basics</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 6 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-6">
+                                <div class="node-number">06</div>
+                                <div class="node-title"><span>🐳 Containers and Microservices</span></div>
+                                <ul class="node-items">
+                                    <li>Docker or Podman basics</li>
+                                    <li>Images, containers, Dockerfiles</li>
+                                    <li>Docker Compose for multiservice apps</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 7 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-7">
+                                <div class="node-number">07</div>
+                                <div class="node-title"><span>⚡ CI/CD</span></div>
+                                <ul class="node-items">
+                                    <li>Jenkins, GitHub Actions, GitLab CI, CircleCI</li>
+                                    <li>Continuous integration & deployment pipelines</li>
+                                    <li>Automated testing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 8 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-8">
+                                <div class="node-number">08</div>
+                                <div class="node-title"><span>📜 Infrastructure as Code (IaC)</span></div>
+                                <ul class="node-items">
+                                    <li>Terraform (Provisioning)</li>
+                                    <li>Ansible (Configuration management)</li>
+                                    <li>Alternatives: Pulumi, Puppet, Chef</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 9 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-9">
+                                <div class="node-number">09</div>
+                                <div class="node-title"><span>🕸️ Orchestration</span></div>
+                                <ul class="node-items">
+                                    <li>Kubernetes clusters</li>
+                                    <li>Deployments, services, scaling</li>
+                                    <li>kubectl basics</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node 10 -->
+                        <div class="roadmap-node">
+                            <div class="node-content node-10">
+                                <div class="node-number">10</div>
+                                <div class="node-title"><span>📊 Monitoring & Logging</span></div>
+                                <ul class="node-items">
+                                    <li>ELK/EFK stack</li>
+                                    <li>Prometheus & Grafana</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning Resources -->
+                    <div class="resources-section">
+                        <h3>📖 Best Free Learning Resources</h3>
+
+                        <div class="resource-category">
+                            <h4>🐧 Linux Fundamentals</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Linux Journey <span class="free-badge">FREE</span></h5>
+                                    <p>Interactive guide to learning Linux basics</p>
+                                    <a href="https://linuxjourney.com/" target="_blank" class="resource-link">Start Learning</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>The Linux Command Line <span class="free-badge">FREE</span></h5>
+                                    <p>Comprehensive book on command line basics</p>
+                                    <a href="http://linuxcommand.org/tlcl.php" target="_blank" class="resource-link">Download Book</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>freeCodeCamp Linux <span class="free-badge">FREE</span></h5>
+                                    <p>Complete YouTube course on Linux fundamentals</p>
+                                    <a href="https://www.youtube.com/watch?v=sWbUDq4S6Y8" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>🌐 Networking & Security</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Computer Networking - Kunal Kushwaha <span class="free-badge">FREE</span></h5>
+                                    <p>Complete networking fundamentals for developers</p>
+                                    <a href="https://www.youtube.com/watch?v=IPvYjXCsTg8" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Practical Networking <span class="free-badge">FREE</span></h5>
+                                    <p>Easy-to-understand networking concepts</p>
+                                    <a href="https://www.practicalnetworking.net/" target="_blank" class="resource-link">Learn More</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Network Chuck <span class="free-badge">FREE</span></h5>
+                                    <p>Engaging networking tutorials and certifications</p>
+                                    <a href="https://www.youtube.com/@NetworkChuck" target="_blank" class="resource-link">Visit Channel</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>💻 Programming for DevOps</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Python for DevOps - TechWorld with Nana <span class="free-badge">FREE</span></h5>
+                                    <p>Python essentials for DevOps engineers</p>
+                                    <a href="https://www.youtube.com/watch?v=t4vKPhjcMZw" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Automate the Boring Stuff <span class="free-badge">FREE</span></h5>
+                                    <p>Free online book for automation with Python</p>
+                                    <a href="https://automatetheboringstuff.com/" target="_blank" class="resource-link">Read Book</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Python - Programming with Mosh <span class="free-badge">FREE</span></h5>
+                                    <p>6-hour comprehensive Python tutorial</p>
+                                    <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank" class="resource-link">Watch Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>⚙️ Version Control with Git</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Git and GitHub - freeCodeCamp <span class="free-badge">FREE</span></h5>
+                                    <p>Complete Git tutorial in one video</p>
+                                    <a href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Pro Git Book <span class="free-badge">FREE</span></h5>
+                                    <p>Official Git documentation and book</p>
+                                    <a href="https://git-scm.com/book/en/v2" target="_blank" class="resource-link">Read Online</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Learn Git Branching <span class="free-badge">FREE</span></h5>
+                                    <p>Interactive Git visualization tool</p>
+                                    <a href="https://learngitbranching.js.org/" target="_blank" class="resource-link">Start Interactive</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>☁️ Cloud Platforms (AWS)</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>AWS Cloud Practitioner - freeCodeCamp <span class="free-badge">FREE</span></h5>
+                                    <p>13-hour AWS fundamentals course</p>
+                                    <a href="https://www.youtube.com/watch?v=SOTamWNgDKc" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>AWS Free Tier <span class="free-badge">FREE</span></h5>
+                                    <p>Hands-on practice with free AWS services</p>
+                                    <a href="https://aws.amazon.com/free/" target="_blank" class="resource-link">Get Started</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Stephane Maarek AWS <span class="free-badge">FREE</span></h5>
+                                    <p>Top-rated AWS instructor on YouTube</p>
+                                    <a href="https://www.youtube.com/@StephaneMaarek" target="_blank" class="resource-link">Visit Channel</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>🐳 Docker & Containers</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Docker Tutorial - TechWorld with Nana <span class="free-badge">FREE</span></h5>
+                                     <p>Comprehensive Docker documentation</p>
+                                    <a href="https://docs.docker.com/get-started/" target="_blank" class="resource-link">Read Docs</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Play with Docker <span class="free-badge">FREE</span></h5>
+                                    <p>Free online Docker playground</p>
+                                    <a href="https://labs.play-with-docker.com/" target="_blank" class="resource-link">Practice Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>⚡ CI/CD Pipelines</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Jenkins Tutorial - freeCodeCamp <span class="free-badge">FREE</span></h5>
+                                    <p>Complete Jenkins CI/CD course</p>
+                                    <a href="https://www.youtube.com/watch?v=7KCS70sCoK0" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>GitHub Actions Tutorial <span class="free-badge">FREE</span></h5>
+                                    <p>Learn GitHub Actions for CI/CD</p>
+                                    <a href="https://www.youtube.com/watch?v=R8_veQiYBjI" target="_blank" class="resource-link">Watch Tutorial</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>GitLab CI/CD <span class="free-badge">FREE</span></h5>
+                                    <p>Official GitLab CI/CD documentation</p>
+                                    <a href="https://docs.gitlab.com/ee/ci/" target="_blank" class="resource-link">Read Docs</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>📜 Infrastructure as Code</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Terraform Tutorial - freeCodeCamp <span class="free-badge">FREE</span></h5>
+                                    <p>Complete Terraform course for beginners</p>
+                                    <a href="https://www.youtube.com/watch?v=SLB_c_ayRMo" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Ansible for Beginners <span class="free-badge">FREE</span></h5>
+                                    <p>Learn Ansible automation basics</p>
+                                    <a href="https://www.youtube.com/watch?v=1id6ERvfozo" target="_blank" class="resource-link">Watch Tutorial</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>HashiCorp Learn <span class="free-badge">FREE</span></h5>
+                                    <p>Official Terraform learning platform</p>
+                                    <a href="https://learn.hashicorp.com/terraform" target="_blank" class="resource-link">Start Learning</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>🕸️ Kubernetes Orchestration</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Kubernetes Course - freeCodeCamp <span class="free-badge">FREE</span></h5>
+                                    <p>4-hour Kubernetes complete course</p>
+                                    <a href="https://www.youtube.com/watch?v=X48VuDVv0do" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Kubernetes Official Tutorial <span class="free-badge">FREE</span></h5>
+                                    <p>Official K8s documentation and tutorials</p>
+                                    <a href="https://kubernetes.io/docs/tutorials/" target="_blank" class="resource-link">Read Docs</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>KodeKloud Free Labs <span class="free-badge">FREE</span></h5>
+                                    <p>Free Kubernetes hands-on labs</p>
+                                    <a href="https://kodekloud.com/courses/kubernetes-for-the-absolute-beginners-hands-on/" target="_blank" class="resource-link">Practice Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>📊 Monitoring & Logging</h4>
+                            <div class="resource-links">
+                                <div class="resource-card">
+                                    <h5>Prometheus & Grafana Tutorial <span class="free-badge">FREE</span></h5>
+                                    <p>Complete monitoring setup guide</p>
+                                    <a href="https://www.youtube.com/watch?v=9TJx7QTrTyo" target="_blank" class="resource-link">Watch Course</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>ELK Stack Tutorial <span class="free-badge">FREE</span></h5>
+                                    <p>Learn Elasticsearch, Logstash, Kibana</p>
+                                    <a href="https://www.youtube.com/watch?v=gS_nHTWZEJ8" target="_blank" class="resource-link">Watch Tutorial</a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>Grafana Official Learn <span class="free-badge">FREE</span></h5>
+                                    <p>Official Grafana learning resources</p>
+                                    <a href="https://grafana.com/tutorials/" target="_blank" class="resource-link">Start Learning</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div class="projects-section">
+                        <h3>🚀 DevOps Projects to Build</h3>
+                        
+                        <div class="project-item">
+                            <h5>1. Automated CI/CD Pipeline with Jenkins & Docker</h5>
+                            <p>Build a complete CI/CD pipeline that automates testing, building, and deployment of a web application using Jenkins and Docker containers.</p>
+                            <div class="project-tags">
+                                <span class="tag">Jenkins</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">GitHub</span>
+                                <span class="tag">Beginner</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=nplH3BzKHPk" target="_blank" class="resource-link">Watch Tutorial</a>
+                        </div>
+
+                        <div class="project-item">
+                            <h5>2. Infrastructure as Code with Terraform on AWS</h5>
+                            <p>Deploy a complete AWS infrastructure including VPC, EC2 instances, and RDS database using Terraform IaC principles.</p>
+                            <div class="project-tags">
+                                <span class="tag">Terraform</span>
+                                <span class="tag">AWS</span>
+                                <span class="tag">IaC</span>
+                                <span class="tag">Intermediate</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=iRaai1IBlB0" target="_blank" class="resource-link">Watch Tutorial</a>
+                        </div>
+
+                        <div class="project-item">
+                            <h5>3. Kubernetes Microservices Deployment</h5>
+                            <p>Deploy a microservices application on Kubernetes with load balancing, auto-scaling, and monitoring setup.</p>
+                            <div class="project-tags">
+                                <span class="tag">Kubernetes</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Microservices</span>
+                                <span class="tag">Advanced</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=s_o8dwzRlu4" target="_blank" class="resource-link">Watch Tutorial</a>
+                        </div>
+
+                        <div class="project-item">
+                            <h5>4. Monitoring Stack with Prometheus & Grafana</h5>
+                            <p>Set up complete monitoring solution for your applications using Prometheus for metrics collection and Grafana for visualization.</p>
+                            <div class="project-tags">
+                                <span class="tag">Prometheus</span>
+                                <span class="tag">Grafana</span>
+                                <span class="tag">Monitoring</span>
+                                <span class="tag">Intermediate</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=9TJx7QTrTyo" target="_blank" class="resource-link">Watch Tutorial</a>
+                        </div>
+
+                        <div class="project-item">
+                            <h5>5. Ansible Configuration Management</h5>
+                            <p>Automate server configuration and application deployment across multiple servers using Ansible playbooks.</p>
+                            <div class="project-tags">
+                                <span class="tag">Ansible</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Linux</span>
+                                <span class="tag">Intermediate</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=3RiVKs8GHYQ" target="_blank" class="resource-link">Watch Tutorial</a>
+                        </div>
+
+                        <div class="project-item">
+                            <h5>6. Complete DevOps Project - Netflix Clone</h5>
+                            <p>End-to-end DevOps project deploying Netflix clone with Jenkins CI/CD, Docker, Kubernetes, and monitoring.</p>
+                            <div class="project-tags">
+                                <span class="tag">Full Stack</span>
+                                <span class="tag">Jenkins</span>
+                                <span class="tag">K8s</span>
+                                <span class="tag">Advanced</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=g8X5AoqCJHc" target="_blank" class="resource-link">Watch Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Profile Detail Views (Roadmap Only) -->
+            <div id="otherDetailView" style="display:none;">
+                <div class="detail-view">
+                    <button class="back-btn" onclick="backToProfiles()">← Back to Resources</button>
+                    <div id="otherDetailContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="listing.js"></script>
+    <script src="named2.js"></script>
+  </body>
+</html> 
