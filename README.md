@@ -453,7 +453,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 -----
 
-\<div align="center"\>
+
 
 ### ⭐ Star us on GitHub if you find this helpful\!
 
@@ -461,6 +461,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 [⬆ Back to Top](https://www.google.com/search?q=%23-project-structure)
 
-\</div\>
 
-Would you like to generate a placeholder `LICENSE` file content to complete the project structure?
